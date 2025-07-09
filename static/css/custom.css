@@ -1,0 +1,798 @@
+/* Mobile-first design styles */
+
+body {
+    font-family: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #F5F7FA;
+    margin: 0;
+}
+
+
+
+/* Mobile Header */
+.mobile-header {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    margin-bottom: 8px;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    height: 52px;
+    padding: 0;
+}
+
+.mobile-header h5 {
+    font-family: 'Onest', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #001A34;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 20px;
+    text-align: center;
+    pointer-events: none;
+    line-height: 20px;
+}
+
+.mobile-header .back-btn {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    z-index: 2;
+}
+
+.mobile-header .back-btn svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: rgba(0,26,52,0.4);
+}
+
+/* Product Card */
+.product-card {
+    border: 1px solid #e9ecef;
+}
+
+/* Photo Sections */
+.photo-section {
+    background: white;
+    border-radius: 24px;
+    padding: 16px;
+    min-height: 182px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.section-header h6 {
+    color: #212529;
+    font-size: 16px;
+    font-family: 'Onest', sans-serif;
+    font-weight: 600;
+}
+
+.section-header p {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: 'Onest', sans-serif;
+    font-weight: 400;
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 4px;
+    flex-grow: 1;
+    align-items: flex-start;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 2px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.photo-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+/* Photo Placeholder */
+.photo-placeholder {
+    width: 72px;
+    height: 96px;
+    flex-shrink: 0;
+    background: #e3f2fd;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.photo-placeholder i {
+    font-size: 18px;
+    color: #2196f3;
+}
+
+/* Photo placeholder with uploaded image */
+.photo-placeholder.has-photo {
+    border: none;
+    background: white;
+    padding: 0;
+}
+
+.photo-placeholder.has-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.photo-placeholder.has-photo .remove-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: #99A3AE;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.photo-placeholder.has-photo .remove-btn i {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* Loading indicator for photos */
+.photo-placeholder.loading {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 60px;
+}
+
+.loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.loading-text {
+    font-size: 12px;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Modal Styles */
+.modal-content {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Button Styles */
+.btn-primary {
+    background: #007bff;
+    border: none;
+    font-weight: 600;
+    font-family: 'Onest', sans-serif;
+}
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    font-weight: 600;
+    font-family: 'Onest', sans-serif;
+}
+
+/* Typography improvements with Onest font */
+h2, h3, h4, h5, h6 {
+    font-family: 'Onest', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: 'Onest', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.navbar-brand, .nav-link {
+    font-family: 'Onest', sans-serif;
+    font-weight: 500;
+}
+
+.modal-title {
+    font-family: 'Onest', sans-serif;
+    font-weight: 600;
+}
+
+.card-title {
+    font-family: 'Onest', sans-serif;
+    font-weight: 500;
+}
+
+/* Fixed bottom area */
+.fixed-bottom {
+    border-top: 1px solid rgba(204, 214, 228, 0.3);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.fixed-bottom .btn-primary {
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* Container adjustments for full-width cards */
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Camera styles */
+#camera-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#camera-canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gallery page styles */
+.gallery-image {
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Horizontal Gallery */
+.horizontal-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-gallery::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.horizontal-gallery::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.horizontal-gallery::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.gallery-item {
+    flex: 0 0 300px;
+    min-width: 300px;
+}
+
+.gallery-item .card {
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Alert animations */
+.alert {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modal Bottom */
+.modal-dialog-bottom {
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+}
+
+.modal-dialog-bottom .modal-content {
+    border-radius: 20px 20px 0 0 !important;
+}
+
+.rounded-top-4 {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+/* Camera Modal Styles */
+.camera-modal-fullscreen .modal-content {
+    border-radius: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.camera-modal-fullscreen .modal-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+    /* Safe area for devices with notch */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+.camera-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.camera-video-container video,
+.camera-video-container canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 1;
+}
+
+.camera-controls {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+.camera-shutter-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.camera-shutter-btn::after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+}
+
+.camera-upload-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 123, 255, 0.9);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Onest', sans-serif;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.camera-photo-counter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Onest', sans-serif;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.photo-approval-controls {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.photo-approval-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item {
+    flex: 0 0 250px;
+    min-width: 250px;
+}
+    
+.horizontal-gallery {
+    gap: 0.75rem;
+    padding: 0.25rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .photo-grid {
+        gap: 4px;
+    }
+    
+    .photo-placeholder i {
+        font-size: 16px;
+    }
+    
+    /* Camera responsive adjustments */
+    .camera-controls {
+        bottom: 100px;
+    }
+    
+    .camera-upload-btn {
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .photo-approval-controls {
+        bottom: 70px;
+    }
+    
+    .camera-photo-counter {
+        top: 15px;
+        left: 15px;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 375px) {
+    .photo-grid {
+        gap: 3px;
+    }
+    
+    .photo-placeholder {
+        width: 65px;
+        height: 88px;
+    }
+    
+    /* Camera responsive adjustments for very small screens */
+    .camera-controls {
+        bottom: 90px;
+    }
+    
+    .camera-upload-btn {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .photo-approval-controls {
+        bottom: 60px;
+    }
+    
+    .camera-shutter-btn {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .camera-shutter-btn::after {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .photo-approval-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Photo selection modal custom styles */
+#photoSelectionModal .modal-content {
+    min-height: 160px;
+    padding: 0;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+#photoSelectionModal .modal-body {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+}
+
+.photo-modal-btn {
+    height: 56px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    transition: background 0.15s;
+}
+
+.photo-modal-btn.photo {
+    background: rgba(0,150,255,0.08);
+    color: #005BFF;
+}
+
+.photo-modal-btn.photo svg {
+    width: 24px;
+    height: 24px;
+    fill: #005BFF;
+}
+
+.photo-modal-btn.gallery {
+    background: transparent;
+    color: #005BFF;
+    border: none;
+}
+
+.photo-modal-btn.gallery svg {
+    width: 24px;
+    height: 24px;
+    fill: #005BFF;
+}
+
+.photo-modal-btn + .photo-modal-btn {
+    margin-top: 8px;
+}
+
+.camera-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    padding: 0;
+    box-shadow: none;
+    transition: background 0.15s;
+}
+
+.camera-close-btn i {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* --- Стили для центральной части макета (cellist) --- */
+/* --- Белый фон центральной части с закруглением сверху --- */
+.centre-bg {
+    background: #fff;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    width: 100%;
+    position: relative;
+    height: 90vh;
+    z-index: 1;
+}
+.centre-cart {
+    max-width: 420px;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+    height: calc(100vh - 90px); /* 90px — высота фиксированной кнопки + отступ */
+}
+.centre-cart h1 {
+    font-size: 27px;
+    font-weight: 700;
+    color: #070707;
+    text-align: center;
+    margin-bottom: 28px;
+    line-height: 32px;
+    padding: 0 16px;
+}
+.cellist {
+    margin-bottom: 32px;
+    overflow: hidden;
+    padding: 0 16px;
+}
+.cellist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px 0px 12px 0px;
+    position: relative;
+}
+.cellist-item:not(:last-child) {
+    border-bottom: 1px solid #F0F2F5;
+}
+.cellist-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #F5F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.cellist-item-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #070707;
+}
+.cellist-item-description {
+    font-size: 16px;
+    color: #667685;
+    font-weight: 400;
+}
+.centre-folder-illustration {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: translateY(-40px);
+}
+.centre-folder-illustration img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+#photo-grid.photo-grid-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.photo-grid-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #F5F7FA;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.photo-grid-remove {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.15s;
+}
+.photo-grid-remove:hover {
+    background: #005BFF;
+}
+#bottom-buttons .btn-primary {
+    border-radius: 12px;
+    font-weight: 600;
+}
+#bottom-buttons .btn-outline-primary {
+    border-radius: 12px;
+    font-weight: 600;
+    background: #EBF7FF;
+    color: #005BFF;
+    border: none;
+}
