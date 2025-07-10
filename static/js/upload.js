@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             photoSelectionModal.show(); // Открываем модалку выбора способа
         }
         if (e.target.closest('#save-btn')) {
-            alert('Сохранено! (реализуйте отправку на сервер)');
+            window.location.href = 'https://www.figma.com/proto/1tVrznxgJ5SN1eJTzQBMsm/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF%D1%8B?page-id=0%3A1&node-id=1-120294&viewport=-1118%2C107%2C0.73&t=JnlVovtjVZAfDN6M-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A120294';
         }
     });
 
